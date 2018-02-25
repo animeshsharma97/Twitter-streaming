@@ -97,11 +97,6 @@ class delete_table(Resource):
         twitter.drop(engine)
         return {'Status' : 'The table of tweets was deleted.'}
 
-# Checking if twitter table exists or not
-class table_exists(Resource):
-    def get(self):
-        return {'Status' : 'Twitter_Data' in engine.table_names()}
-    
 # Check table size
 class table_size(Resource):
     def get(self):
@@ -246,7 +241,6 @@ class export_to_csv(Resource):
 
 # adding resources for all the classes in the REST API  
 api_flask.add_resource(delete_table , '/delete_table')
-api_flask.add_resource(table_exists , '/table_exists')
 api_flask.add_resource(table_size , '/table_size')
 api_flask.add_resource(table_name , '/table_name')
 api_flask.add_resource(store_tweets, '/store_tweets/<string:query>/<int:count>')
