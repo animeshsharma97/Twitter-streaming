@@ -87,6 +87,12 @@ class table_size(Resource):
             return {'Size of Twitter data table': result}
         except:
             return {'Size of Twitter data table': 0}
+        
+# Display column names    
+class column_names(Resource):
+    def get(self):
+        column_names = "Date, TweetId, Tweet, AuthorID, ScreenName, Source, RetweetCount, FavoriteCount, FollowerCount, UserURL, Language"
+        return {'Columns' : column_names}
 
 # Display all the data inside the table
 class show_table_data(Resource):
@@ -212,6 +218,7 @@ class export_to_csv(Resource):
 api_flask.add_resource(delete_table , '/delete_table')
 api_flask.add_resource(table_size , '/table_size')
 api_flask.add_resource(table_name , '/table_name')
+api_flask.add_resource(column_names , '/column_names')
 api_flask.add_resource(store_tweets, '/store_tweets/<string:query>/<int:count>')
 api_flask.add_resource(show_table_data, '/show_data')
 api_flask.add_resource(filter_int_columns, '/filter_int/<string:column>/<string:operator>/<int:num>')
