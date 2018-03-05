@@ -16,10 +16,10 @@ app = Flask(__name__)
 api_flask = Api(app)
 
 # Authentication Details
-consumer_key = ""
-consumer_secret = ""
-access_token = ""
-access_token_secret = ""
+consumer_key = " "
+consumer_secret = " "
+access_token = " "
+access_token_secret = " "
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = API(auth)
