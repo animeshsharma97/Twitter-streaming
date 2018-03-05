@@ -15,10 +15,10 @@ app = Flask(__name__)
 api_flask = Api(app)
 
 # Authentication Details
-consumer_key = "s6cgqa2kLoK93SXh0yIJemOQw"
-consumer_secret = "yPcnOk9jkHnJYAOUMLZCnzwwt9hGdRPQ0eGptp6kYO7Nr729lz"
-access_token = "939458628699881472-fIJjxfJcAfZh8wMM6Ke8g8ypiR69wsN"
-access_token_secret = "ryAIbM5fOTylsFqPJFibMBtWfxmpBWNFml70MHpZIDPtI"
+consumer_key = " "
+consumer_secret = " "
+access_token = " "
+access_token_secret = " "
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = API(auth)
